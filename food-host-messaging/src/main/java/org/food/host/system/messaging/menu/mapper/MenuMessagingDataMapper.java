@@ -17,5 +17,6 @@ public class MenuMessagingDataMapper {
                 .setName(menu.getName())
                 .setHostId(menu.getHostId().getValue())
                 .build();
+
     }
 }
