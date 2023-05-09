@@ -16,6 +16,14 @@
     <file url="file://$PROJECT_DIR$/food-host-domain/food-host-core-domain/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/food-host-domain/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/food-host-domain/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/food-host-messaging/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/infrastructure/kafka-config/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/infrastructure/kafka-model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/infrastructure/kafka-model/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/infrastructure/kafka-producer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/infrastructure/kafka-schema/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/infrastructure/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/infrastructure/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

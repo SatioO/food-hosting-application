@@ -4,7 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.kafka.annotation.EnableKafka;
 
+@EnableKafka
 @EnableJpaRepositories(basePackages = "org.food.host.system.dataaccess")
 @EntityScan(basePackages = "org.food.host.system.dataaccess")
 @SpringBootApplication(scanBasePackages = "org.food.host.system")

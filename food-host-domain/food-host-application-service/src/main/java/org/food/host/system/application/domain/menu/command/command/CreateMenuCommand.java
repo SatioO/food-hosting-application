@@ -24,5 +24,5 @@ public class CreateMenuCommand {
     private String name;
 
     @NotNull
-    private Set<MenuItemDTO> menuItemDTOS;
+    private Set<MenuItemDTO> menuItems;
 }

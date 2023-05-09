@@ -19,6 +19,6 @@ public class MenuEntity {
     private UUID hostId;
     private String name;
 
-    @OneToMany(mappedBy = "menu", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "menu", cascade = CascadeType.ALL)
     private Set<MenuItemEntity> menuItems;
 }

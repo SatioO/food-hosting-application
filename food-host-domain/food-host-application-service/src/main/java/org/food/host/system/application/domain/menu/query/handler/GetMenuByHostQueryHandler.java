@@ -9,6 +9,7 @@ import org.food.host.system.application.domain.menu.query.query.GetMenuByHostQue
 import org.food.host.system.domain.common.valueobject.HostId;
 import org.food.host.system.domain.menu.entity.Menu;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -23,6 +24,7 @@ public class GetMenuByHostQueryHandler {
         this.menuDataMapper = menuDataMapper;
     }
 
+    @Transactional(readOnly = true)
     public GetMenuByHostResponseDTO getMenuByHost(GetMenuByHostQuery getMenuByHostQuery) {
         List<Menu> menus = menuRepository.getMenuByHost(new HostId(getMenuByHostQuery.getHostId()));
         List<MenuDTO> mappedMenus = menus.stream().map(menuDataMapper::menuToMenuDto).toList();

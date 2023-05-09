@@ -10,7 +10,6 @@ import org.food.host.system.domain.menu.entity.Menu;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -26,14 +25,13 @@ public class MenuRepositoryImpl implements MenuRepository {
 
     @Override
     public void createOrder(Menu menu) {
-        MenuEntity menuEntity = menuDataAccessMapper.menuToMenuEntity(menu);
-        menuJpaRepository.save(menuEntity);
+        menuJpaRepository.save(menuDataAccessMapper.menuToMenuEntity(menu));
     }
 
     @Override
     public List<Menu> getMenuByHost(HostId hostId) {
-        List<MenuEntity> menus = menuJpaRepository.findByHostId(hostId.getValue());
-        menus.forEach(menu -> log.info("Menu: {} with Menu Id {} found", menu.getName(), menu.getId()));
-        return menus.stream().map(menuDataAccessMapper::menuEntityToMenu).collect(Collectors.toList());
+        return menuJpaRepository
+                .findByHostId(hostId.getValue())
+                .stream().map(menuDataAccessMapper::menuEntityToMenu).collect(Collectors.toList());
     }
 }

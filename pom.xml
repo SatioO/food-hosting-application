@@ -9,22 +9,27 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>food-host-domain</module>
         <module>common</module>
+        <module>food-host-domain</module>
         <module>food-host-container</module>
         <module>food-host-application</module>
         <module>food-host-dataaccess</module>
+        <module>food-host-messaging</module>
+        <module>infrastructure</module>
     </modules>
 
     <properties>
         <maven-compiler-plugin.version>3.9.0</maven-compiler-plugin.version>
-        <spring-boot.version>3.0.5</spring-boot.version>
+        <spring-boot.version>3.0.6</spring-boot.version>
+        <spring-kafka.version>3.0.6</spring-kafka.version>
+        <avro.version>1.11.1</avro.version>
+        <confluent.version>7.0.1</confluent.version>
     </properties>
 
     <parent>
         <artifactId>spring-boot-starter-parent</artifactId>
         <groupId>org.springframework.boot</groupId>
-        <version>3.0.5</version>
+        <version>3.0.6</version>
         <relativePath/>
     </parent>
 
@@ -38,6 +43,11 @@
             <dependency>
                 <groupId>org.food.host.system</groupId>
                 <artifactId>food-host-container</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.food.host.system</groupId>
+                <artifactId>food-host-application-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -57,12 +67,32 @@
             </dependency>
             <dependency>
                 <groupId>org.food.host.system</groupId>
-                <artifactId>food-host-application-service</artifactId>
+                <artifactId>food-host-messaging</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.food.host.system</groupId>
                 <artifactId>common-domain</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.food.host.system</groupId>
+                <artifactId>kafka-producer</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.food.host.system</groupId>
+                <artifactId>kafka-consumer</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.food.host.system</groupId>
+                <artifactId>kafka-schema</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.food.host.system</groupId>
+                <artifactId>kafka-config</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>

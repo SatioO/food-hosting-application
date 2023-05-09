@@ -1,5 +1,9 @@
 server:
   port: 8080
+
+food-service:
+  menu-created-topic-name: menu-created
+
 spring:
   jpa:
     open-in-view: false
@@ -18,3 +22,16 @@ spring:
     platform: postgres
     schema: classpath:init-schema.sql
     initialization-mode: always
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      pool-name: ps-connection-pool
+      maximum-pool-size: 16
+      max-lifetime: 1800000
+      idle-timeout: 30000
+
+kafka-config:
+  bootstrap-servers: localhost:19092, localhost:29092, localhost:39092
+  schema-registry-url-key: schema.registry.url
+  schema-registry-url: http://localhost:8081
+  num-of-partitions: 3
+  replication-factor: 3

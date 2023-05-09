@@ -9,5 +9,5 @@ import java.util.UUID;
 
 @Repository
 public interface MenuJpaRepository extends JpaRepository<MenuEntity, UUID> {
-    public List<MenuEntity> findByHostId(UUID hostId);
+    List<MenuEntity> findByHostId(UUID hostId);
 }

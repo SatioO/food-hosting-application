@@ -1,5 +1,6 @@
 package org.food.host.system.application.domain.menu.mapper;
 
+import lombok.extern.slf4j.Slf4j;
 import org.food.host.system.application.domain.menu.command.command.CreateMenuCommand;
 import org.food.host.system.application.domain.menu.dto.MenuDTO;
 import org.food.host.system.application.domain.menu.dto.MenuItemDTO;
@@ -12,13 +13,15 @@ import org.springframework.stereotype.Component;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+@Slf4j
 @Component
 public class MenuDataMapper {
     public Menu createMenuCommandToMenu(CreateMenuCommand createMenuCommand) {
+
         return Menu.builder()
                 .hostId(new HostId(createMenuCommand.getHostId()))
                 .name(createMenuCommand.getName())
-                .menuItems(menuItemsToMenuItemEntities(createMenuCommand.getMenuItemDTOS()))
+                .menuItems(menuItemsToMenuItemEntities(createMenuCommand.getMenuItems()))
                 .build();
     }
 

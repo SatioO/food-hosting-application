@@ -5,11 +5,13 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/infrastructure/kafka-model/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/common-domain/pom.xml" />
+        <option value="$PROJECT_DIR$/infrastructure/kafka-model/pom.xml" />
       </set>
     </option>
   </component>

@@ -17,7 +17,6 @@ import java.util.UUID;
 @RequestMapping(value = "/menu")
 public class MenuController {
     private final MenuApplicationService menuApplicationService;
-
     public MenuController(MenuApplicationService menuApplicationService) {
         this.menuApplicationService = menuApplicationService;
     }
